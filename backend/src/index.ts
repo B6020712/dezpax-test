@@ -20,5 +20,6 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/stores', storesRouter);
 
 app.listen(server_port, () => {
+    console.log(`http://${process.env.BASEURL}:${process.env.FRONTEND_PORT}`);
     console.log(`Listening on port ${server_port}`);
 });
