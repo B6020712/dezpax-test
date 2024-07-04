@@ -1,4 +1,5 @@
 # Full Stack Developer Test
+> Please use node version 18 or newver version
 ### Frontend
 ```bash
 # go to frontend directory
