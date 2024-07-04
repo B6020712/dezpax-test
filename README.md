@@ -1,6 +1,7 @@
 # Full Stack Developer Test
-> Please use node version 18 or newver version
-> Warning! Both `frontend/.env` and `backend/.env` must match.
+>> Please use node version 18 or newver version
+
+>> Warning! Both `frontend/.env` and `backend/.env` must match.
 ### Backend
 ```bash
 # go to backend directory
