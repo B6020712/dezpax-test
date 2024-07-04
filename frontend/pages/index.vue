@@ -1,19 +1,4 @@
 <template>
-    <!-- <b-main padding="y-4">
-        <b-h level="3"> Products </b-h>
-        <Row padding="t-4" gutter="x-4 y-3" columns="1 sm-2 lg-3">
-            <Col v-for="(item, index) in products" :key="index">
-                <Card>
-                    <CardImgTop style="height: 400px;" :src=item.product_url :alt=item.sku />
-                    <CardBody>
-                        <CardTitle>{{ item.product_name }}</CardTitle>
-                        <CardText>Price: {{ item.product_price }} Baht</CardText>
-                        <NuxtLink :to="{ name: 'detail-id', params: { id: item.sku } }" class="py-2 px-4 rounded border border-primary text-decoration-none"><i class="bi bi-card-list"></i> Product Detail</NuxtLink>
-                    </CardBody>
-                </Card>
-            </Col>
-        </Row>
-    </b-main> -->
     <main class="py-4">
         <h3>Products</h3>
         <div class="pt-4 gx-4 gy-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
@@ -43,7 +28,9 @@ export default {
     },
     methods: {
         fetchData: async function () {
-            const getProducts = await $fetch('http://localhost:8000/stores')
+            const base_url = this.$config.public.BASEURL
+            const backend_port = this.$config.public.BACKEND_PORT
+            const getProducts = await $fetch(`http://${base_url}:${backend_port}/stores`)
             this.products = getProducts.products
         }
     },
