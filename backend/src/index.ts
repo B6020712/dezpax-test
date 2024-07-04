@@ -1,4 +1,5 @@
 import express, { Request, Response, Router } from 'express';
+import 'dotenv/config';
 import cors from 'cors';
 import storesRouter from './stores';
 const app = express();
