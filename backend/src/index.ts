@@ -1,8 +1,15 @@
 import express, { Request, Response, Router } from 'express';
+import cors from 'cors';
 import storesRouter from './stores';
-
 const app = express();
-const port = process.env.BACKEND_PORT || 3000;
+
+var corsOption = {
+    origin: `http://${process.env.BASEURL}:${process.env.FRONTEND_PORT}`,
+    methods: ['GET']
+}
+
+app.use(cors(corsOption));
+const server_port = process.env.BACKEND_PORT || 8000;
 
 app.get('/', (req: Request, res: Response) => {
     res.status(200).send({
@@ -12,6 +19,6 @@ app.get('/', (req: Request, res: Response) => {
 
 app.use('/stores', storesRouter);
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+app.listen(server_port, () => {
+    console.log(`Listening on port ${server_port}`);
 });
