@@ -1,9 +1,10 @@
 # Full Stack Developer Test
 > Please use node version 18 or newver version
-### Frontend
+> Warning! Both `frontend/.env` and `backend/.env` must match.
+### Backend
 ```bash
-# go to frontend directory
-cd path/to/frontend
+# go to backend directory
+cd path/to/backend
 ```
 create `.env` file and set env variable follow `.env.example`
 | env variable | default |
@@ -17,10 +18,10 @@ npm install
 # run server
 npm run dev
 ```
-### Backend
+### Frontend
 ```bash
-# go to backend directory
-cd path/to/backend
+# go to frontend directory
+cd path/to/frontend
 ```
 create `.env` file and set env variable follow `.env.example`
 | env variable | default |
