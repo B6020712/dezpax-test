@@ -36,3 +36,11 @@ npm install
 # run server
 npm run dev
 ```
+
+### Test Docker
+```bash
+# frontend image name: boss-test-frontend:v1
+docker compose up
+# backend image name: boss-test-backend:v1
+docker compose down
+```

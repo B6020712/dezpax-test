@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  frontend:
+    image: boss-test-frontend:v1
+    build: ./frontend/.
+    ports: 
+      - "3000:3000"
+    
+  backend:
+    image: boss-test-backend:v1
+    build: ./backend/.
+    ports:
+      - "8000:8000"
