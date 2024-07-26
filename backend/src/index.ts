@@ -5,7 +5,7 @@ import storesRouter from './stores';
 const app = express();
 
 var corsOption = {
-    origin: `http://${process.env.BASEURL}:${process.env.FRONTEND_PORT}`,
+    origin: `${process.env.BASEURL}-${process.env.FRONTEND_PORT}.app.github.dev`,
     methods: ['GET']
 }
 

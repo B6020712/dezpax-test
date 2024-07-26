@@ -1,6 +1,6 @@
 <template>
     <main class="py-4">
-        <h3>Products</h3>
+        <h3>Produck</h3>
         <div class="pt-4 gx-4 gy-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <div class="col" v-for="(item, index) in products" :key="index">
                 <div class="card" style="height: 600px;">
@@ -30,7 +30,7 @@ export default {
         fetchData: async function () {
             const base_url = this.$config.public.BASEURL
             const backend_port = this.$config.public.BACKEND_PORT
-            const getProducts = await $fetch(`http://${base_url}:${backend_port}/stores`)
+            const getProducts = await $fetch(`${base_url}-${backend_port}.app.github.dev/stores`)
             this.products = getProducts.products
         }
     },

@@ -38,7 +38,7 @@ export default {
         fetchData: async function () {
             const base_url = this.$config.public.BASEURL
             const backend_port = this.$config.public.BACKEND_PORT
-            const getProduct = await $fetch(`http://${base_url}:${backend_port}/stores/${this.$route.params.id}`)
+            const getProduct = await $fetch(`${base_url}-${backend_port}.app.github.dev/stores/${this.$route.params.id}`)
             this.product = getProduct.product[0]
         }
     },
